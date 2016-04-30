@@ -1,0 +1,29 @@
+{
+  "name": "splash-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nacmonad/splashScroll.git"
+  },
+  "keywords": [
+    "node",
+    "angular",
+    "$broadcast",
+    "$emit",
+    "$on"
+  ],
+  "author": "nacmonad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nacmonad/splashScroll/issues"
+  },
+  "homepage": "https://github.com/nacmonad/splashScroll#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
