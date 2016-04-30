@@ -1,14 +1,86 @@
+html {
+
+}
 .content-wrap {
-	position:fixed;
+	position:absolute;
 	background:pink;
-	height:100%;
 	width:100%;
+	z-index:-2;
+	margin-bottom:136px;
+
 }
 
 .flex-center {
 	position:relative;
 	display:flex;
+	flex-direction:column;
 	justify-content:center;
 	align-items:center;
+	width:100%;
+	height:100%;	
+}
+
+.myFooter {
+	position:fixed;
+	width:100%;
+	bottom:0;
+	background:rgba(150,150,150,1);
+}
+.myFooter ul {
+	list-style:none;
+}
+
+.my-row {
+
+}
+#row0 {
+	position:relative;
+	background-image:url('/public/img/heroimg.jpg');
+	background-size:cover;
+	color : white;
 	height:500px;
+	z-index:-1;
+}
+#blackmask {
+	position:relative;
+	height:100%;
+	width:100%;
+	background-color:rgba(0,0,0,0.8);
+}
+
+#row1 {
+	position:relative;
+	background-color : white;
+	color:black;
+	height:500px;
+	z-index:-1;
+}
+
+#row2 {
+	position:relative;
+	background-color: yellow;
+	height:500px;
+	z-index:-1;
+}
+
+#row3 {
+	position:relative;
+	background-color : black;
+	color:white;
+	height:1000px;
+	z-index:-1;
+}
+#row4 {
+	position:relative;
+	background-color : blue;
+	color:white;
+	height:500px;
+	z-index:-1;
+}
+#row5 {
+	position:relative;
+	background-color : green;
+	color:white;
+	height:750px;
+	z-index:-1;
 }
