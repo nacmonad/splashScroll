@@ -1,0 +1,14 @@
+.content-wrap {
+	position:fixed;
+	background:pink;
+	height:100%;
+	width:100%;
+}
+
+.flex-center {
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:500px;
+}
