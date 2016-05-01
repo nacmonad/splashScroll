@@ -1,6 +1,27 @@
 html {
 
 }
+nav {
+	transition:all 0.25s ease-in-out;
+	border: none !important;
+	
+}
+nav [aria-expanded="true"] {
+	background-color: rgba(220,220,220,1);
+
+
+}
+nav [aria-expanded="false"] {
+	background-color: rgba(220,220,220,0);
+	transition:all 0.25s ease-in-out;
+}
+.sticky {
+	background-color: rgba(220,220,220,1);
+}
+.sticky-disabled {
+	background-color: rgba(220,220,220,0);
+	/*height:72px;*/
+}
 .content-wrap {
 	position:absolute;
 	background:pink;
@@ -25,7 +46,7 @@ html {
 	width:100%;
 	bottom:0;
 	background:rgba(150,150,150,1);
-	padding-top:10px;
+	padding-top:15px;
 }
 .myFooter ul {
 	list-style:none;
@@ -99,6 +120,17 @@ html {
 	.up-down {
 		bottom:300px;
 	}
+}
+
+@media only screen and (min-width:768px) {
+	nav [aria-expanded="true"] {
+	background-color: rgba(220,220,220,0);
+	}
+	nav [aria-expanded="false"] {
+	background-color: rgba(220,220,220,0);
+
+	}
+
 }
 .up,.down {
 	opacity:0.8;
