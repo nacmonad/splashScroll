@@ -1,4 +1,4 @@
-var myApp = angular.module('splashPage',['ui.bootstrap','ui.router']);
+var myApp = angular.module('splashPage',['ui.bootstrap','ui.router','myDirectives']);
 
 myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider,$stateProvider){
 		$urlRouterProvider.otherwise('/');
@@ -24,13 +24,23 @@ myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider
 			});
 	}]);
 
-myApp.controller("MainCtrl", function ($scope) {
+myApp.controller("MainCtrl", function ($scope, $document,$window) {
 	console.log("MainCtrl loaded");
 	$scope.msg = "hello world";
-	$scope.bang = function () {
-		alert($scope.msg);
-		}
+	$scope.rows = ["row0","row1","row2","row3","row4","row5"];
+	$scope.activeRow = "row0";
+	
+	angular.element($window).bind("scroll", function() {
+				$scope.$broadcast('scroll-event', { scrollY:$window.scrollY });
+			});
+
+	$scope.$on('row-active', function (event, args) {
+			console.log("From MainCtrl: " + args.row_id + " active");
+			$scope.activeRow = args.row_id;
+		});
+
 	})
+
 	.controller('NavCtrl', function ($scope) {
 		console.log("NavCtrl loaded");
 
@@ -40,10 +50,11 @@ myApp.controller("MainCtrl", function ($scope) {
 		$scope.search = function (key) {
 			key ? alert("search key " + key) : alert("please enter a search term");
 		}
-		$scope.activeTab = function (index) {
-			console.log("tab" + index);
-		}
+		
+
+
 	})
+
 	.controller('FtrCtrl', function ($scope) {
 		console.log("FtrCtrl loaded");
 		

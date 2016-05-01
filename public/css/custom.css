@@ -10,7 +10,7 @@ html {
 
 }
 
-.flex-center {
+.flex-center {	
 	position:relative;
 	display:flex;
 	flex-direction:column;
@@ -25,6 +25,7 @@ html {
 	width:100%;
 	bottom:0;
 	background:rgba(150,150,150,1);
+	padding-top:10px;
 }
 .myFooter ul {
 	list-style:none;
@@ -52,7 +53,7 @@ html {
 	position:relative;
 	background-color : white;
 	color:black;
-	height:500px;
+	height:1000px;
 	z-index:-1;
 }
 
@@ -84,3 +85,30 @@ html {
 	height:750px;
 	z-index:-1;
 }
+
+.up-down {
+	position:fixed;
+	display:flex;
+	flex-direction:column;
+	right:50px;
+	bottom:195px;
+	font-size:36px;
+	z-index:1;
+}
+@media only screen and (max-width: 768px) {
+	.up-down {
+		bottom:300px;
+	}
+}
+.up,.down {
+	opacity:0.8;
+	transition: 0.1s ease-in-out;
+}
+.up:hover {
+	opacity:1;
+}
+
+.down:hover {
+	opacity:1;
+}
+
