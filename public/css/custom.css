@@ -1,6 +1,7 @@
 html {
 
 }
+
 nav {
 	transition:all 0.25s ease-in-out;
 	border: none !important;
@@ -44,8 +45,83 @@ nav li:active {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 	background:rgba(220,220,220,0.5);
+}
+
+.navbar-brand {
 
 }
+
+/*key frames  search toggle */
+@keyframes appear {
+  from {
+    width: 0px;
+  }
+  to {
+    opacity: 170px;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 170px;
+  }
+  to {
+    opacity: 0px;
+  }
+}
+
+
+#search-toggle, #submit-button  {
+	font-size:8px;
+	border-radius: 16px;
+	width:32px;
+	height:32px;
+	border:1.5px solid rgba(255,255,240,0);
+	transition: border 0.25s linear;
+
+	
+}
+#search-toggle:focus, #submit-button:focus {outline:0;}
+#search-toggle:hover, #submit-button:hover {
+	border:1px solid rgba(255,255,240,1);
+	background:none;
+	
+}
+
+#search-toggle span, #submit-button span {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+
+}
+	
+#search-box {
+	-webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+
+}
+#search-box .hide-remove{
+
+  
+
+}
+#search-box .hide-remove-active{
+
+	
+
+}
+
+#search-box .hide-add {
+	
+    
+}
+
+#search-box .hide-add-active {
+    
+}
+
 .content-wrap {
 	position:absolute;
 	background:pink;

@@ -1,4 +1,4 @@
-var myApp = angular.module('splashPage',['ui.bootstrap','ui.router','myDirectives']);
+var myApp = angular.module('splashPage',['ui.bootstrap','ui.router','ngAnimate','myDirectives']);
 
 myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider,$stateProvider){
 		$urlRouterProvider.otherwise('/');
@@ -26,7 +26,6 @@ myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider
 
 myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 	console.log("MainCtrl loaded");
-	$scope.msg = "hello world";
 	$scope.rows = ["row0","row1","row2","row3","row4","row5"];
 	$scope.activeRow = "row0";
 
@@ -41,12 +40,11 @@ myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 
 	})
 
-	.controller('NavCtrl', function ($scope) {
-		console.log("NavCtrl loaded");
 
+	.controller('NavCtrl', function ($scope) {
 		$scope.sections = ['Main','One','Two','Three'];
 		$scope.searchKey ='';
-		//$scope.sticky=0;
+		$scope.searchToggle = false;
 
 		$scope.$on('scroll-event', function (event,args) {
 			(args.scrollY > 100) ? ($scope.sticky=1, $scope.$apply()) : ($scope.sticky=0,$scope.$apply());
@@ -56,6 +54,9 @@ myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 			key ? alert("search key " + key) : alert("please enter a search term");
 		}
 		
+		$scope.toggleSearchBar =function () {
+			$scope.searchToggle ? $scope.searchToggle=false : $scope.searchToggle=true;
+		}
 
 
 	})

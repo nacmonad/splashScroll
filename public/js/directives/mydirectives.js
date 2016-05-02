@@ -8,7 +8,7 @@ myDirectives
 				scope.up = function () {
 
 				if ( (scope.rows.indexOf(scope.activeRow)-1) < 0 ) { 
-					console.log ("I canna go up!"); 
+					//console.log ("I canna go up!"); 
 					scope.scrollToTop();
 				}
 				else { 
