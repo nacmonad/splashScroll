@@ -5,7 +5,7 @@ html {
 nav {
 	transition:all 0.25s ease-in-out;
 	border: none !important;
-	height:54px;
+	height:57px;
 	
 }
 nav [aria-expanded="true"] {
@@ -18,12 +18,22 @@ nav [aria-expanded="false"] {
 	transition:all 0.25s ease-in-out;
 }
 
+.navbar-collapse {
+	transition:all 0.25s ease-in-out;
+}
 .sticky {
 	background-color: rgba(220,220,220,1);
 }
 .sticky-disabled {
 	background-color: rgba(220,220,220,0);
 	/*height:72px;*/
+}
+.sticky-disabled.collapsing{
+	background-color: rgba(220,220,220,0);
+}
+.sticky-disabled.in {
+	transition:all 0.5s ease-in-out;
+	background-color: rgba(0,0,0,1);
 }
 .logo {
 	transition:all 0.25s linear;
@@ -47,6 +57,7 @@ nav li:active {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 	background:rgba(220,220,220,0.5);
 }
+
 
 .navbar-brand {
 
