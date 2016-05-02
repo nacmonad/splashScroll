@@ -26,21 +26,10 @@ myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider
 
 myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 	console.log("MainCtrl loaded");
-	$scope.rows = ["row0","row1","row2","row3","row4","row5"];
-	$scope.activeRow = "row0";
 
-	angular.element($window).bind("scroll", function() {
-				$rootScope.$broadcast('scroll-event', { scrollY:$window.scrollY });
-			});
 
-	$scope.$on('row-active', function (event, args) {
-			//console.log("From MainCtrl: " + args.row_id + " active");
-			$scope.activeRow = args.row_id;
-		});
 
 	})
-
-
 	.controller('NavCtrl', function ($scope,$timeout) {
 		$scope.sections = ['Main','One','Two','Three'];
 		$scope.searchKey ='';
@@ -60,7 +49,6 @@ myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 
 
 	})
-
 	.controller('FtrCtrl', function ($scope) {
 		console.log("FtrCtrl loaded");
 		
