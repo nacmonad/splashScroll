@@ -59,8 +59,8 @@ nav li:active {
 }
 
 
-.navbar-brand {
-
+.navbar-brand svg{
+	display:inline-block;
 }
 
 /*key frames  search toggle */
