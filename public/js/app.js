@@ -4,7 +4,7 @@ myApp.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			.state('main', {
-				url: '/main', 
+				url: '/', 
 				templateUrl: '/public/templates/main.html', 
 				controller: 'MainCtrl'
 			})
@@ -41,7 +41,7 @@ myApp.controller("MainCtrl", function ($rootScope, $scope, $document,$window) {
 	})
 
 
-	.controller('NavCtrl', function ($scope) {
+	.controller('NavCtrl', function ($scope,$timeout) {
 		$scope.sections = ['Main','One','Two','Three'];
 		$scope.searchKey ='';
 		$scope.searchToggle = false;

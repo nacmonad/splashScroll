@@ -5,6 +5,7 @@ html {
 nav {
 	transition:all 0.25s ease-in-out;
 	border: none !important;
+	height:54px;
 	
 }
 nav [aria-expanded="true"] {
@@ -68,8 +69,16 @@ nav li:active {
     opacity: 0px;
   }
 }
+.form-control {
+	display: inline-block;
+}
 
-
+#search-toggle{
+	float:left;
+}
+#submit-button{
+	
+}
 #search-toggle, #submit-button  {
 	font-size:8px;
 	border-radius: 16px;
@@ -77,12 +86,12 @@ nav li:active {
 	height:32px;
 	border:1.5px solid rgba(255,255,240,0);
 	transition: border 0.25s linear;
-
+	margin:2px;
 	
 }
 #search-toggle:focus, #submit-button:focus {outline:0;}
 #search-toggle:hover, #submit-button:hover {
-	border:1px solid rgba(255,255,240,1);
+	border:1px solid rgba(255,255,240,0.8);
 	background:none;
 	
 }
@@ -96,31 +105,25 @@ nav li:active {
 }
 	
 #search-box {
-	-webkit-transition:all 0.25s ease-in-out;
-    -moz-transition:all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition:all 0.25s ease-in-out;
+  height:33px;
+  width:170px;
+  margin:none;
 
 }
-#search-box .hide-remove{
-
-  
-
-}
-#search-box .hide-remove-active{
-
-	
-
+#search-box.ng-enter, #search-box.ng-leave {
+  transition:0.3s ease-in all;
 }
 
-#search-box .hide-add {
-	
-    
-}
+/* starting animations for enter */
+#search-box.ng-enter { width: 0px;padding:0px;}
+/* terminal animations for enter */ 
+#search-box.ng-enter.ng-enter-active { width: 170px; }
 
-#search-box .hide-add-active {
-    
-}
+/* starting animations for leave */
+#search-box.ng-leave { width:170px; }
+/* terminal animations for leave */
+#search-box.ng-leave.ng-leave-active { width:0px; padding:0px;}
+
 
 .content-wrap {
 	position:absolute;
@@ -141,6 +144,13 @@ nav li:active {
 	height:100%;	
 }
 
+.flex-row {
+	position:relative;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+	align-items: baseline;
+}
 .myFooter {
 	position:fixed;
 	width:100%;
@@ -222,6 +232,14 @@ nav li:active {
 	}
 	.sticky-disabled .logo {
 		height:25px;
+	}
+
+	.flex-row {
+		position:relative;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items: baseline;
 	}
 }
 
