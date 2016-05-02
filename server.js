@@ -11,9 +11,7 @@ app.use(express.static(__dirname));
 //ROUTES
 //will automatically serve index.html from /public 
 
-app.get('/', function (req,res) {
-	res.redirect('/main');
-})
+
 //LISTEN
 app.listen(app.get('port'), function () {
 	console.log('Listening on port '+ app.get('port'));
