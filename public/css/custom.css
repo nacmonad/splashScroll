@@ -58,7 +58,9 @@ nav li:active {
 	background:rgba(220,220,220,0.5);
 }
 
-
+.navbar-brand {
+	width:100%;
+}
 .navbar-brand svg{
 	display:inline-block;
 }
