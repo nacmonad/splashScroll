@@ -36,15 +36,11 @@ nav [aria-expanded="false"] {
 	background-color: rgba(0,0,0,1);
 }
 .logo {
+	display:block;
 	transition:all 0.25s linear;
 	z-index:1;
 }
-.sticky .logo {
-	height:25px;
-}
-.sticky-disabled .logo {
-	height:50px;
-}
+
 nav li {
 
 }
@@ -58,11 +54,15 @@ nav li:active {
 	background:rgba(220,220,220,0.5);
 }
 
-.navbar-brand {
-	width:100%;
+/* max-width/max-height fixed picture scaling in IE, but this is not a great solution */
+.sticky .logo {
+	max-height:25px;
+	max-width:100px;
 }
-.navbar-brand svg{
-	display:inline-block;
+
+.sticky-disabled .logo {
+	max-height:50px;
+	max-width:200px;
 }
 
 /*key frames  search toggle */

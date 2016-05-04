@@ -29,8 +29,10 @@ myDirectives
 					$scope.activeRow = args.row_id;
 				});
 
+
+			//$window.scrollY doesn't exist for IE, use pageYOffset
 			angular.element($window).bind("scroll", function() {
-				$rootScope.$broadcast('scroll-event', { scrollY:$window.scrollY });
+				$rootScope.$broadcast('scroll-event', { scrollY:$window.pageYOffset });
 			});
 		}],
 		link: function(scope,element,attrs) {
